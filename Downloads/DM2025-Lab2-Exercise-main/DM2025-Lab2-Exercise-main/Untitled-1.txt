@@ -1,0 +1,7 @@
+<!doctype html>
+<html><body>
+  <h2>Image test</h2>
+  <img src="birthday.jpg" style="max-width:300px">
+  <h2>Audio test</h2>
+  <audio src="birthday.mp3" controls></audio>
+</body></html>

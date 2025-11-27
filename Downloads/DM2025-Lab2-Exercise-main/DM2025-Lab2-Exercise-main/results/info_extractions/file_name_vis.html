@@ -1,0 +1,249 @@
+<style>
+.lx-highlight { position: relative; border-radius:3px; padding:1px 2px;}
+.lx-highlight .lx-tooltip {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  background: #333;
+  color: #fff;
+  text-align: left;
+  border-radius: 4px;
+  padding: 6px 8px;
+  position: absolute;
+  z-index: 1000;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  max-width: 240px;
+  white-space: normal;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+.lx-highlight:hover .lx-tooltip { visibility: visible; opacity:1; }
+.lx-animated-wrapper { max-width: 100%; font-family: Arial, sans-serif; }
+.lx-controls {
+  background: #fafafa; border: 1px solid #90caf9; border-radius: 8px;
+  padding: 12px; margin-bottom: 16px;
+}
+.lx-button-row {
+  display: flex; justify-content: center; gap: 8px; margin-bottom: 12px;
+}
+.lx-control-btn {
+  background: #4285f4; color: white; border: none; border-radius: 4px;
+  padding: 8px 16px; cursor: pointer; font-size: 13px; font-weight: 500;
+  transition: background-color 0.2s;
+}
+.lx-control-btn:hover { background: #3367d6; }
+.lx-progress-container {
+  margin-bottom: 8px;
+}
+.lx-progress-slider {
+  width: 100%; margin: 0; appearance: none; height: 6px;
+  background: #ddd; border-radius: 3px; outline: none;
+}
+.lx-progress-slider::-webkit-slider-thumb {
+  appearance: none; width: 18px; height: 18px; background: #4285f4;
+  border-radius: 50%; cursor: pointer;
+}
+.lx-progress-slider::-moz-range-thumb {
+  width: 18px; height: 18px; background: #4285f4; border-radius: 50%;
+  cursor: pointer; border: none;
+}
+.lx-status-text {
+  text-align: center; font-size: 12px; color: #666; margin-top: 4px;
+}
+.lx-text-window {
+  font-family: monospace; white-space: pre-wrap; border: 1px solid #90caf9;
+  padding: 12px; max-height: 260px; overflow-y: auto; margin-bottom: 12px;
+  line-height: 1.6;
+}
+.lx-attributes-panel {
+  background: #fafafa; border: 1px solid #90caf9; border-radius: 6px;
+  padding: 8px 10px; margin-top: 8px; font-size: 13px;
+}
+.lx-current-highlight {
+  border-bottom: 4px solid #ff4444;
+  font-weight: bold;
+  animation: lx-pulse 1s ease-in-out;
+}
+@keyframes lx-pulse {
+  0% { text-decoration-color: #ff4444; }
+  50% { text-decoration-color: #ff0000; }
+  100% { text-decoration-color: #ff4444; }
+}
+.lx-legend {
+  font-size: 12px; margin-bottom: 8px;
+  padding-bottom: 8px; border-bottom: 1px solid #e0e0e0;
+}
+.lx-label {
+  display: inline-block;
+  padding: 2px 4px;
+  border-radius: 3px;
+  margin-right: 4px;
+  color: #000;
+}
+.lx-attr-key {
+  font-weight: 600;
+  color: #1565c0;
+  letter-spacing: 0.3px;
+}
+.lx-attr-value {
+  font-weight: 400;
+  opacity: 0.85;
+  letter-spacing: 0.2px;
+}
+
+/* Add optimizations with larger fonts and better readability for GIFs */
+.lx-gif-optimized .lx-text-window { font-size: 16px; line-height: 1.8; }
+.lx-gif-optimized .lx-attributes-panel { font-size: 15px; }
+.lx-gif-optimized .lx-current-highlight { text-decoration-thickness: 4px; }
+</style>
+    <div class="lx-animated-wrapper lx-gif-optimized">
+      <div class="lx-attributes-panel">
+        <div class="lx-legend">Highlights Legend: <span class="lx-label" style="background-color:#D2E3FC;">audience_impact</span> <span class="lx-label" style="background-color:#C8E6C9;">opinion_statement</span></div>
+        <div id="attributesContainer"></div>
+      </div>
+      <div class="lx-text-window" id="textWindow">
+        **Page 1**
+&quot;&quot;&quot;
+Aziz Ansari’s “Good Fortune” feels engineered around the personality of one of its stars: the 
+<span class="lx-highlight lx-current-highlight" data-idx="0" style="background-color:#C8E6C9;">wonderful Keanu Reeves</span>. We’ve all heard the stories about how humble and kind Reeves is in 
+real life, avoiding the trappings of celebrity living that he could have been a part of for almost four 
+decades now. <span class="lx-highlight" data-idx="1" style="background-color:#C8E6C9;">Gentle, sweet, and genuinely kind, his character in this <span class="lx-highlight" data-idx="2" style="background-color:#C8E6C9;">inconsistent comedy</span> is a joy</span>, 
+the main reason to see this riff on “It’s a Wonderful Life” for the gig economy. <span class="lx-highlight" data-idx="3" style="background-color:#C8E6C9;">Ansari struggles 
+as a writer</span> when he tries to make the movie into a commentary on the widening economic rift of 
+the 2020s, and <span class="lx-highlight" data-idx="4" style="background-color:#C8E6C9;">he truly rushes the ending in a way that feels a bit unearned</span>, but <span class="lx-highlight" data-idx="5" style="background-color:#C8E6C9;">there’s so much to 
+like about the four stars of this movie</span> that <span class="lx-highlight" data-idx="6" style="background-color:#C8E6C9;">it’s a really tough flick to hate</span>. Kind of like Keanu 
+Reeves. 
+The star of “The Matrix” plays Gabriel, a low-level angel whose assignment is “Texting and 
+Driving.” If you’ve ever texted or surfed on your phone and suddenly looked up just in time to 
+avoid a collision, that was Gabriel. His boss on the angel beat isn’t God himself but Martha (Sandra 
+Oh), who encourages him to keep doing his job well, and he’ll climb the ladder. It turns out there’s 
+a hierarchy in Heaven, too. Gabriel’s wings aren’t even as big as Martha’s. 
+This cut-rate Clarence becomes fascinated by Arj (Ansari), a guy who’s really struggling with 
+multiple jobs that don’t even provide enough money to get him out of living in his car. He delivers 
+food to ungrateful jerks for a company called Foodster, does odd jobs for an app that makes him 
+do various tasks like standing in line to pick up the latest tasty treat, and works at a big box store 
+called Hardware Heaven. That’s where he meets the charming Elena (<span class="lx-highlight" data-idx="7" style="background-color:#C8E6C9;">Keke Palmer, always 
+magnetic</span>), who is fighting to form a work union that Arj can’t find the time to care about. 
+Meanwhile, the task app job brings him into the life of a venture capitalist named Jeff (Seth 
+Rogen), who agrees to hire him for a week as his personal assistant. When Arj makes a decision 
+that irritates Jeff, he gets fired, and Gabriel worries that this kind guy might end up taking his own 
+life. 
+Gabriel decides to show himself to Arj, first doing the angel thing of arguing for hope. In one of 
+the film’s funniest segments, Arj sees visions of his future that include peeing in a bottle on an 
+Amazon-esque job, living with in-laws, and being unable to afford medical bills for a pet. Gabriel 
+means well, but Arj isn’t exactly empowered by the visions of what’s ahead. Thinking, in a very 
+Keanu way, that Arj might learn that money doesn’t buy happiness, he switches his place with Jeff 
+in the world. The rich man becomes poor; the poor man becomes rich. At the end of the week, 
+when Gabriel expects Arj to go back to his old life, he refuses. And then things get really weird. 
+“Good Fortune” is essentially a vehicle for the comedic charm of its cast, and not just Reeves. 
+Ansari wrote himself <span class="lx-highlight" data-idx="8" style="background-color:#C8E6C9;">a role that feels of a piece with his characters on “Parks and Recreation” and 
+“Master of None,”</span> and <span class="lx-highlight" data-idx="9" style="background-color:#C8E6C9;">his comic timing is still strong</span>. <span class="lx-highlight" data-idx="10" style="background-color:#C8E6C9;">Palmer is charming every time</span>, and that’s 
+certainly the case here, even if <span class="lx-highlight" data-idx="11" style="background-color:#C8E6C9;">she doesn’t exactly have enough chemistry with Ansari</span>. <span class="lx-highlight" data-idx="12" style="background-color:#C8E6C9;">Rogen is 
+typically great</span>, <span class="lx-highlight" data-idx="13" style="background-color:#C8E6C9;">selling the arc of a rich guy who learns how the other side lives the hard way</span>. 
+But <span class="lx-highlight" data-idx="14" style="background-color:#C8E6C9;">the movie is really stolen by Reeves</span>. For <span class="lx-highlight" data-idx="15" style="background-color:#C8E6C9;">how fully he mishandles the situation</span>, Gabriel is 
+demoted to humanity, where he learns his own lessons about what makes people tick. He tries a 
+cheeseburger &amp; milkshake for the first time, he gets a job washing dishes, he ends up chain-
+smoking—<span class="lx-highlight" data-idx="16" style="background-color:#C8E6C9;">watching the puppy dog countenance of Reeves go from angelic to toughened by the 
+world is a joy</span>. However, even <span class="lx-highlight" data-idx="17" style="background-color:#C8E6C9;">that arc gets kind of abruptly discarded in a rushed final act</span>. <span class="lx-highlight" data-idx="18" style="background-color:#C8E6C9;">It feels</span>
+&quot;&quot;&quot;
+
+**Page 2**
+&quot;&quot;&quot;
+like Ansari came up with a great idea before really figuring out where he was going to take it. 
+Without spoiling, <span class="lx-highlight" data-idx="19" style="background-color:#C8E6C9;">the final scenes feel a bit too soft</span> for a movie that’s really about pretty hard stuff. 
+While some of the <span class="lx-highlight" data-idx="20" style="background-color:#C8E6C9;">frustrating aspects of a directorial debut</span> hamper the final product, there is <span class="lx-highlight" data-idx="21" style="background-color:#C8E6C9;">a 
+copious amount of empathy</span> throughout “Good Fortune.” Roger’s famous quote about film being 
+an empathy machine is kind of embedded in the plot if you think about it in that Jeff is allowed to 
+literally step into the shoes of a life he’s never known—he got most of his money from his rich 
+parents—and even the angel is given an emotional understanding of what it means to be human by 
+becoming one. <span class="lx-highlight" data-idx="22" style="background-color:#C8E6C9;">There’s a better film</span> that truly digs into these ideas of how empathy can be altered 
+by experience, but <span class="lx-highlight" data-idx="23" style="background-color:#C8E6C9;">this one has a big enough heart</span> that <span class="lx-highlight" data-idx="24" style="background-color:#D2E3FC;">its little wings can still get it off the ground</span>. 
+This review was filed from the premiere at the Toronto International Film Festival on September 
+17. It opens on October 17, 2025.
+&quot;&quot;&quot;
+
+
+      </div>
+      <div class="lx-controls">
+        <div class="lx-button-row">
+          <button class="lx-control-btn" onclick="playPause()">▶️ Play</button>
+          <button class="lx-control-btn" onclick="prevExtraction()">⏮ Previous</button>
+          <button class="lx-control-btn" onclick="nextExtraction()">⏭ Next</button>
+        </div>
+        <div class="lx-progress-container">
+          <input type="range" id="progressSlider" class="lx-progress-slider"
+                 min="0" max="24" value="0"
+                 onchange="jumpToExtraction(this.value)">
+        </div>
+        <div class="lx-status-text">
+          Entity <span id="entityInfo">1/25</span> |
+          Pos <span id="posInfo">[110-132]</span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function() {
+        const extractions = [{"index": 0, "class": "opinion_statement", "text": "wonderful Keanu Reeves", "color": "#C8E6C9", "startPos": 110, "endPos": 132, "beforeText": "**Page 1**\n&quot;&quot;&quot;\nAziz Ansari\u2019s \u201cGood Fortune\u201d feels engineered around the personality of one of its stars: the \n", "extractionText": "wonderful Keanu Reeves", "afterText": ". We\u2019ve all heard the stories about how humble and kind Reeves is in \nreal life, avoiding the trappings of celebrity living that he could have been a ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Keanu Reeves</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">wonderful</span>}</div>"}, {"index": 1, "class": "opinion_statement", "text": "Gentle, sweet, and genuinely kind, his character in this inconsistent comedy is a joy", "color": "#C8E6C9", "startPos": 320, "endPos": 405, "beforeText": "w humble and kind Reeves is in \nreal life, avoiding the trappings of celebrity living that he could have been a part of for almost four \ndecades now. ", "extractionText": "Gentle, sweet, and genuinely kind, his character in this inconsistent comedy is a joy", "afterText": ", \nthe main reason to see this riff on \u201cIt\u2019s a Wonderful Life\u201d for the gig economy. Ansari struggles \nas a writer when he tries to make the movie into", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">His character</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">Gentle, sweet, and genuinely kind</span>}</div>"}, {"index": 2, "class": "opinion_statement", "text": "inconsistent comedy", "color": "#C8E6C9", "startPos": 377, "endPos": 396, "beforeText": "rappings of celebrity living that he could have been a part of for almost four \ndecades now. Gentle, sweet, and genuinely kind, his character in this ", "extractionText": "inconsistent comedy", "afterText": " is a joy, \nthe main reason to see this riff on \u201cIt\u2019s a Wonderful Life\u201d for the gig economy. Ansari struggles \nas a writer when he tries to make the m", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The comedy</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">inconsistent</span>}</div>"}, {"index": 3, "class": "opinion_statement", "text": "Ansari struggles as a writer", "color": "#C8E6C9", "startPos": 489, "endPos": 518, "beforeText": "genuinely kind, his character in this inconsistent comedy is a joy, \nthe main reason to see this riff on \u201cIt\u2019s a Wonderful Life\u201d for the gig economy. ", "extractionText": "Ansari struggles \nas a writer", "afterText": " when he tries to make the movie into a commentary on the widening economic rift of \nthe 2020s, and he truly rushes the ending in a way that feels a b", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Ansari as a writer</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">struggles</span>}</div>"}, {"index": 4, "class": "opinion_statement", "text": "he truly rushes the ending in a way that feels a bit unearned", "color": "#C8E6C9", "startPos": 618, "endPos": 679, "beforeText": "for the gig economy. Ansari struggles \nas a writer when he tries to make the movie into a commentary on the widening economic rift of \nthe 2020s, and ", "extractionText": "he truly rushes the ending in a way that feels a bit unearned", "afterText": ", but there\u2019s so much to \nlike about the four stars of this movie that it\u2019s a really tough flick to hate. Kind of like Keanu \nReeves. \nThe star of \u201cTh", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The ending</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">rushes the ending in a way that feels a bit unearned</span>}</div>"}, {"index": 5, "class": "opinion_statement", "text": "there\u2019s so much to like about the four stars of this movie", "color": "#C8E6C9", "startPos": 685, "endPos": 744, "beforeText": " make the movie into a commentary on the widening economic rift of \nthe 2020s, and he truly rushes the ending in a way that feels a bit unearned, but ", "extractionText": "there\u2019s so much to \nlike about the four stars of this movie", "afterText": " that it\u2019s a really tough flick to hate. Kind of like Keanu \nReeves. \nThe star of \u201cThe Matrix\u201d plays Gabriel, a low-level angel whose assignment is \u201cT", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The four stars</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">so much to like</span>}</div>"}, {"index": 6, "class": "opinion_statement", "text": "it\u2019s a really tough flick to hate", "color": "#C8E6C9", "startPos": 750, "endPos": 783, "beforeText": "f \nthe 2020s, and he truly rushes the ending in a way that feels a bit unearned, but there\u2019s so much to \nlike about the four stars of this movie that ", "extractionText": "it\u2019s a really tough flick to hate", "afterText": ". Kind of like Keanu \nReeves. \nThe star of \u201cThe Matrix\u201d plays Gabriel, a low-level angel whose assignment is \u201cTexting and \nDriving.\u201d If you\u2019ve ever te", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The flick</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">tough flick to hate</span>}</div>"}, {"index": 7, "class": "opinion_statement", "text": "Keke Palmer, always magnetic", "color": "#C8E6C9", "startPos": 1746, "endPos": 1775, "beforeText": "e standing in line to pick up the latest tasty treat, and works at a big box store \ncalled Hardware Heaven. That\u2019s where he meets the charming Elena (", "extractionText": "Keke Palmer, always \nmagnetic", "afterText": "), who is fighting to form a work union that Arj can\u2019t find the time to care about. \nMeanwhile, the task app job brings him into the life of a venture", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Keke Palmer</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">always magnetic</span>}</div>"}, {"index": 8, "class": "opinion_statement", "text": "a role that feels of a piece with his characters on \u201cParks and Recreation\u201d and \u201cMaster of None,\u201d", "color": "#C8E6C9", "startPos": 2969, "endPos": 3066, "beforeText": " then things get really weird. \n\u201cGood Fortune\u201d is essentially a vehicle for the comedic charm of its cast, and not just Reeves. \nAnsari wrote himself ", "extractionText": "a role that feels of a piece with his characters on \u201cParks and Recreation\u201d and \n\u201cMaster of None,\u201d", "afterText": " and his comic timing is still strong. Palmer is charming every time, and that\u2019s \ncertainly the case here, even if she doesn\u2019t exactly have enough che", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Ansari&#x27;s role</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">of a piece with his characters</span>}</div>"}, {"index": 9, "class": "opinion_statement", "text": "his comic timing is still strong", "color": "#C8E6C9", "startPos": 3071, "endPos": 3103, "beforeText": "ast, and not just Reeves. \nAnsari wrote himself a role that feels of a piece with his characters on \u201cParks and Recreation\u201d and \n\u201cMaster of None,\u201d and ", "extractionText": "his comic timing is still strong", "afterText": ". Palmer is charming every time, and that\u2019s \ncertainly the case here, even if she doesn\u2019t exactly have enough chemistry with Ansari. Rogen is \ntypical", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Ansari&#x27;s comic timing</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">still strong</span>}</div>"}, {"index": 10, "class": "opinion_statement", "text": "Palmer is charming every time", "color": "#C8E6C9", "startPos": 3105, "endPos": 3134, "beforeText": "wrote himself a role that feels of a piece with his characters on \u201cParks and Recreation\u201d and \n\u201cMaster of None,\u201d and his comic timing is still strong. ", "extractionText": "Palmer is charming every time", "afterText": ", and that\u2019s \ncertainly the case here, even if she doesn\u2019t exactly have enough chemistry with Ansari. Rogen is \ntypically great, selling the arc of a ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Palmer</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">charming every time</span>}</div>"}, {"index": 11, "class": "opinion_statement", "text": "she doesn\u2019t exactly have enough chemistry with Ansari", "color": "#C8E6C9", "startPos": 3181, "endPos": 3234, "beforeText": " Recreation\u201d and \n\u201cMaster of None,\u201d and his comic timing is still strong. Palmer is charming every time, and that\u2019s \ncertainly the case here, even if ", "extractionText": "she doesn\u2019t exactly have enough chemistry with Ansari", "afterText": ". Rogen is \ntypically great, selling the arc of a rich guy who learns how the other side lives the hard way. \nBut the movie is really stolen by Reeves", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Palmer and Ansari&#x27;s chemistry</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">not enough chemistry</span>}</div>"}, {"index": 12, "class": "opinion_statement", "text": "Rogen is typically great", "color": "#C8E6C9", "startPos": 3236, "endPos": 3261, "beforeText": "g is still strong. Palmer is charming every time, and that\u2019s \ncertainly the case here, even if she doesn\u2019t exactly have enough chemistry with Ansari. ", "extractionText": "Rogen is \ntypically great", "afterText": ", selling the arc of a rich guy who learns how the other side lives the hard way. \nBut the movie is really stolen by Reeves. For how fully he mishandl", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Rogen</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">typically great</span>}</div>"}, {"index": 13, "class": "opinion_statement", "text": "selling the arc of a rich guy who learns how the other side lives the hard way", "color": "#C8E6C9", "startPos": 3263, "endPos": 3341, "beforeText": "s charming every time, and that\u2019s \ncertainly the case here, even if she doesn\u2019t exactly have enough chemistry with Ansari. Rogen is \ntypically great, ", "extractionText": "selling the arc of a rich guy who learns how the other side lives the hard way", "afterText": ". \nBut the movie is really stolen by Reeves. For how fully he mishandles the situation, Gabriel is \ndemoted to humanity, where he learns his own lesso", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Rogen&#x27;s performance</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">selling the arc</span>}</div>"}, {"index": 14, "class": "opinion_statement", "text": "the movie is really stolen by Reeves", "color": "#C8E6C9", "startPos": 3348, "endPos": 3384, "beforeText": "ly have enough chemistry with Ansari. Rogen is \ntypically great, selling the arc of a rich guy who learns how the other side lives the hard way. \nBut ", "extractionText": "the movie is really stolen by Reeves", "afterText": ". For how fully he mishandles the situation, Gabriel is \ndemoted to humanity, where he learns his own lessons about what makes people tick. He tries a", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The movie</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">stolen by Reeves</span>}</div>"}, {"index": 15, "class": "opinion_statement", "text": "how fully he mishandles the situation", "color": "#C8E6C9", "startPos": 3390, "endPos": 3427, "beforeText": "n is \ntypically great, selling the arc of a rich guy who learns how the other side lives the hard way. \nBut the movie is really stolen by Reeves. For ", "extractionText": "how fully he mishandles the situation", "afterText": ", Gabriel is \ndemoted to humanity, where he learns his own lessons about what makes people tick. He tries a \ncheeseburger &amp; milkshake for the first ti", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Reeves&#x27;s portrayal of Gabriel</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">fully mishandles</span>}</div>"}, {"index": 16, "class": "opinion_statement", "text": "watching the puppy dog countenance of Reeves go from angelic to toughened by the world is a joy", "color": "#C8E6C9", "startPos": 3637, "endPos": 3733, "beforeText": "essons about what makes people tick. He tries a \ncheeseburger &amp; milkshake for the first time, he gets a job washing dishes, he ends up chain-\nsmoking\u2014", "extractionText": "watching the puppy dog countenance of Reeves go from angelic to toughened by the \nworld is a joy", "afterText": ". However, even that arc gets kind of abruptly discarded in a rushed final act. It feels\n&quot;&quot;&quot;\n\n**Page 2**\n&quot;&quot;&quot;\nlike Ansari came up with a great idea bef", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Reeves&#x27;s performance</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">is a joy</span>}</div>"}, {"index": 17, "class": "opinion_statement", "text": "that arc gets kind of abruptly discarded in a rushed final act", "color": "#C8E6C9", "startPos": 3749, "endPos": 3811, "beforeText": "ing dishes, he ends up chain-\nsmoking\u2014watching the puppy dog countenance of Reeves go from angelic to toughened by the \nworld is a joy. However, even ", "extractionText": "that arc gets kind of abruptly discarded in a rushed final act", "afterText": ". It feels\n&quot;&quot;&quot;\n\n**Page 2**\n&quot;&quot;&quot;\nlike Ansari came up with a great idea before really figuring out where he was going to take it. \nWithout spoiling, the ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The final act</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">abruptly discarded</span>}</div>"}, {"index": 18, "class": "opinion_statement", "text": "It feels like Ansari came up with a great idea before really figuring out where he was going to take it", "color": "#C8E6C9", "startPos": 3813, "endPos": 3821, "beforeText": "ntenance of Reeves go from angelic to toughened by the \nworld is a joy. However, even that arc gets kind of abruptly discarded in a rushed final act. ", "extractionText": "It feels", "afterText": "\n&quot;&quot;&quot;\n\n**Page 2**\n&quot;&quot;&quot;\nlike Ansari came up with a great idea before really figuring out where he was going to take it. \nWithout spoiling, the final scen", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Ansari&#x27;s writing</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">great idea before really figuring out</span>}</div>"}, {"index": 19, "class": "opinion_statement", "text": "the final scenes feel a bit too soft", "color": "#C8E6C9", "startPos": 3957, "endPos": 3993, "beforeText": " act. It feels\n&quot;&quot;&quot;\n\n**Page 2**\n&quot;&quot;&quot;\nlike Ansari came up with a great idea before really figuring out where he was going to take it. \nWithout spoiling, ", "extractionText": "the final scenes feel a bit too soft", "afterText": " for a movie that\u2019s really about pretty hard stuff. \nWhile some of the frustrating aspects of a directorial debut hamper the final product, there is a", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The final scenes</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">too soft</span>}</div>"}, {"index": 20, "class": "opinion_statement", "text": "frustrating aspects of a directorial debut", "color": "#C8E6C9", "startPos": 4064, "endPos": 4106, "beforeText": "e was going to take it. \nWithout spoiling, the final scenes feel a bit too soft for a movie that\u2019s really about pretty hard stuff. \nWhile some of the ", "extractionText": "frustrating aspects of a directorial debut", "afterText": " hamper the final product, there is a \ncopious amount of empathy throughout \u201cGood Fortune.\u201d Roger\u2019s famous quote about film being \nan empathy machine ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">A directorial debut</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">frustrating aspects</span>}</div>"}, {"index": 21, "class": "opinion_statement", "text": "a copious amount of empathy", "color": "#C8E6C9", "startPos": 4142, "endPos": 4170, "beforeText": "t for a movie that\u2019s really about pretty hard stuff. \nWhile some of the frustrating aspects of a directorial debut hamper the final product, there is ", "extractionText": "a \ncopious amount of empathy", "afterText": " throughout \u201cGood Fortune.\u201d Roger\u2019s famous quote about film being \nan empathy machine is kind of embedded in the plot if you think about it in that Je", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Empathy</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">copious amount</span>}</div>"}, {"index": 22, "class": "opinion_statement", "text": "There\u2019s a better film", "color": "#C8E6C9", "startPos": 4545, "endPos": 4566, "beforeText": "he got most of his money from his rich \nparents\u2014and even the angel is given an emotional understanding of what it means to be human by \nbecoming one. ", "extractionText": "There\u2019s a better film", "afterText": " that truly digs into these ideas of how empathy can be altered \nby experience, but this one has a big enough heart that its little wings can still ge", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">A film</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">better film</span>}</div>"}, {"index": 23, "class": "opinion_statement", "text": "this one has a big enough heart", "color": "#C8E6C9", "startPos": 4650, "endPos": 4681, "beforeText": " what it means to be human by \nbecoming one. There\u2019s a better film that truly digs into these ideas of how empathy can be altered \nby experience, but ", "extractionText": "this one has a big enough heart", "afterText": " that its little wings can still get it off the ground. \nThis review was filed from the premiere at the Toronto International Film Festival on Septemb", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">This film</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">big enough heart</span>}</div>"}, {"index": 24, "class": "audience_impact", "text": "its little wings can still get it off the ground", "color": "#D2E3FC", "startPos": 4687, "endPos": 4735, "beforeText": "ng one. There\u2019s a better film that truly digs into these ideas of how empathy can be altered \nby experience, but this one has a big enough heart that ", "extractionText": "its little wings can still get it off the ground", "afterText": ". \nThis review was filed from the premiere at the Toronto International Film Festival on September \n17. It opens on October 17, 2025.\n&quot;&quot;&quot;\n\n", "attributesHtml": "<div><strong>class:</strong> audience_impact</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">emotion_evoked</span>: <span class=\"lx-attr-value\">hopeful</span>, <span class=\"lx-attr-key\">causal_element</span>: <span class=\"lx-attr-value\">The film&#x27;s big heart</span>, <span class=\"lx-attr-key\">target_audience</span>: <span class=\"lx-attr-value\">the audience</span>}</div>"}];
+        let currentIndex = 0;
+        let isPlaying = false;
+        let animationInterval = null;
+        let animationSpeed = 1.0;
+
+        function updateDisplay() {
+          const extraction = extractions[currentIndex];
+          if (!extraction) return;
+
+          document.getElementById('attributesContainer').innerHTML = extraction.attributesHtml;
+          document.getElementById('entityInfo').textContent = (currentIndex + 1) + '/' + extractions.length;
+          document.getElementById('posInfo').textContent = '[' + extraction.startPos + '-' + extraction.endPos + ']';
+          document.getElementById('progressSlider').value = currentIndex;
+
+          const playBtn = document.querySelector('.lx-control-btn');
+          if (playBtn) playBtn.textContent = isPlaying ? '⏸ Pause' : '▶️ Play';
+
+          const prevHighlight = document.querySelector('.lx-text-window .lx-current-highlight');
+          if (prevHighlight) prevHighlight.classList.remove('lx-current-highlight');
+          const currentSpan = document.querySelector('.lx-text-window span[data-idx="' + currentIndex + '"]');
+          if (currentSpan) {
+            currentSpan.classList.add('lx-current-highlight');
+            currentSpan.scrollIntoView({block: 'center', behavior: 'smooth'});
+          }
+        }
+
+        function nextExtraction() {
+          currentIndex = (currentIndex + 1) % extractions.length;
+          updateDisplay();
+        }
+
+        function prevExtraction() {
+          currentIndex = (currentIndex - 1 + extractions.length) % extractions.length;
+          updateDisplay();
+        }
+
+        function jumpToExtraction(index) {
+          currentIndex = parseInt(index);
+          updateDisplay();
+        }
+
+        function playPause() {
+          if (isPlaying) {
+            clearInterval(animationInterval);
+            isPlaying = false;
+          } else {
+            animationInterval = setInterval(nextExtraction, animationSpeed * 1000);
+            isPlaying = true;
+          }
+          updateDisplay();
+        }
+
+        window.playPause = playPause;
+        window.nextExtraction = nextExtraction;
+        window.prevExtraction = prevExtraction;
+        window.jumpToExtraction = jumpToExtraction;
+
+        updateDisplay();
+      })();
+    </script>
